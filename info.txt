@@ -1,0 +1,10 @@
+<a href="{% url 'home' %}">Sistema Seguro</a>
+
+
+
+<a href="{% url 'core:home' %}" class="button secondary">{% trans 'Cancelar' %}</a>
+
+
+
+
+<a href="{% url 'core:home' %}">Inicio</a>

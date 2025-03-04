@@ -1,0 +1,564 @@
+INFO 2025-03-03 23:53:10,820 autoreload 5506 127813569826944 Watching for file changes with StatReloader
+INFO 2025-03-03 23:56:57,779 autoreload 5917 135139512762496 Watching for file changes with StatReloader
+INFO 2025-03-03 23:58:17,147 autoreload 6005 139720874295424 Watching for file changes with StatReloader
+WARNING 2025-03-04 00:01:24,430 log 6005 139720819758784 Not Found: /
+WARNING 2025-03-04 00:01:24,431 basehttp 6005 139720819758784 "GET / HTTP/1.1" 404 16391
+INFO 2025-03-04 00:01:25,180 basehttp 6005 139720800876224 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-03-04 00:01:25,185 basehttp 6005 139720809268928 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2025-03-04 00:01:25,188 basehttp 6005 139720819758784 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 21178
+INFO 2025-03-04 00:01:25,227 basehttp 6005 139720819758784 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+WARNING 2025-03-04 00:01:25,434 log 6005 139720819758784 Not Found: /favicon.ico
+WARNING 2025-03-04 00:01:25,435 basehttp 6005 139720819758784 "GET /favicon.ico HTTP/1.1" 404 16453
+WARNING 2025-03-04 00:01:32,287 log 6005 139720800876224 Not Found: /accounts
+WARNING 2025-03-04 00:01:32,288 basehttp 6005 139720800876224 "GET /accounts HTTP/1.1" 404 16441
+INFO 2025-03-04 00:01:39,499 basehttp 6005 139720800876224 "GET /accounts/login HTTP/1.1" 301 0
+ERROR 2025-03-04 00:01:39,599 log 6005 139720800876224 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-03-04 00:01:39,658 basehttp 6005 139720800876224 "GET /accounts/login/ HTTP/1.1" 500 154703
+ERROR 2025-03-04 00:02:07,814 log 6005 139720800876224 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-03-04 00:02:07,872 basehttp 6005 139720800876224 "GET /accounts/login/ HTTP/1.1" 500 161624
+INFO 2025-03-04 00:03:58,024 basehttp 6005 139720800876224 "GET /accounts/login/ HTTP/1.1" 200 16475
+INFO 2025-03-04 00:03:58,056 basehttp 6005 139720819758784 "GET /static/js/main.js HTTP/1.1" 200 2145
+WARNING 2025-03-04 00:03:58,057 basehttp 6005 139720800876224 "GET /static/css/main.css HTTP/1.1" 404 1896
+INFO 2025-03-04 00:04:17,480 basehttp 6005 139720819758784 "GET /__debug__/render_panel/?store_id=be1319b22675454f8b2338f85c165c03&panel_id=SignalsPanel HTTP/1.1" 200 2383
+INFO 2025-03-04 00:04:21,098 basehttp 6005 139720819758784 "GET /__debug__/render_panel/?store_id=be1319b22675454f8b2338f85c165c03&panel_id=StaticFilesPanel HTTP/1.1" 200 43038
+INFO 2025-03-04 00:04:23,417 basehttp 6005 139720819758784 "GET /__debug__/render_panel/?store_id=be1319b22675454f8b2338f85c165c03&panel_id=RequestPanel HTTP/1.1" 200 635
+INFO 2025-03-04 00:04:25,130 basehttp 6005 139720819758784 "GET /__debug__/render_panel/?store_id=be1319b22675454f8b2338f85c165c03&panel_id=TimerPanel HTTP/1.1" 200 1464
+INFO 2025-03-04 00:04:25,146 basehttp 6005 139720819758784 "GET /static/debug_toolbar/js/timer.js HTTP/1.1" 200 3686
+INFO 2025-03-04 00:04:27,821 basehttp 6005 139720819758784 "GET /__debug__/render_panel/?store_id=be1319b22675454f8b2338f85c165c03&panel_id=HistoryPanel HTTP/1.1" 200 11634
+INFO 2025-03-04 00:04:27,833 basehttp 6005 139720819758784 "GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3515
+ERROR 2025-03-04 00:04:46,941 log 6005 139720819758784 Internal Server Error: /accounts/signup/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2025-03-04 00:04:46,990 basehttp 6005 139720819758784 "GET /accounts/signup/ HTTP/1.1" 500 156104
+INFO 2025-03-04 00:05:06,040 basehttp 6005 139720819758784 "GET /accounts/signup/ HTTP/1.1" 200 17168
+WARNING 2025-03-04 00:05:06,064 basehttp 6005 139720819758784 "GET /static/css/main.css HTTP/1.1" 404 1896
+INFO 2025-03-04 00:15:59,662 basehttp 6005 139720819758784 "POST /accounts/signup/ HTTP/1.1" 302 0
+INFO 2025-03-04 00:15:59,691 basehttp 6005 139720819758784 "GET /accounts/confirm-email/ HTTP/1.1" 200 15668
+INFO 2025-03-04 00:16:23,138 basehttp 6005 139720819758784 "GET /accounts/confirm-email/MQ:1tpLZP:_h5dQvgYipT0JI545Gq_aXzMIBqosteLj8n3MawBgdw/ HTTP/1.1" 200 15749
+ERROR 2025-03-04 00:16:38,433 log 6005 139720819758784 Internal Server Error: /accounts/confirm-email/MQ:1tpLZn:Sf9XBlKmeSwGcDW1JZCvXov0HGa2S4GQgtiug5J_jkk/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/views.py", line 277, in post
+    email_address, response = flows.email_verification.verify_email_and_resume(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/internal/flows/email_verification.py", line 34, in verify_email_and_resume
+    response = login_on_verification(request, verification)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/internal/flows/email_verification.py", line 141, in login_on_verification
+    return stage.exit()
+           ^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/stages.py", line 34, in exit
+    return resume_login(self.request, self.login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/internal/flows/login.py", line 98, in resume_login
+    adapter.login(request, login.user)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 529, in login
+    django_login(request, user)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/dispatch/dispatcher.py", line 177, in send
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/proyectos/servidor/apps/usuarios/signals.py", line 29, in user_logged_in_callback
+    user.save(update_fields=['failed_login_attempts', 'locked_until', 'last_login_ip'])
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/db/models/base.py", line 797, in save
+    raise ValueError(
+ValueError: The following fields do not exist in this model, are m2m fields, or are non-concrete fields: locked_until
+ERROR 2025-03-04 00:16:38,520 basehttp 6005 139720819758784 "POST /accounts/confirm-email/MQ:1tpLZn:Sf9XBlKmeSwGcDW1JZCvXov0HGa2S4GQgtiug5J_jkk/ HTTP/1.1" 500 155667
+INFO 2025-03-04 00:17:49,772 basehttp 6005 139720819758784 "GET /accounts/confirm-email/MQ:1tpLZP:_h5dQvgYipT0JI545Gq_aXzMIBqosteLj8n3MawBgdw/ HTTP/1.1" 200 15523
+INFO 2025-03-04 00:18:02,042 basehttp 6005 139720819758784 "GET /accounts/login/ HTTP/1.1" 200 16477
+WARNING 2025-03-04 00:18:02,079 basehttp 6005 139720819758784 "GET /static/css/main.css HTTP/1.1" 404 1896
+ERROR 2025-03-04 00:18:16,481 log 6005 139720819758784 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/views.py", line 93, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 53, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 81, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 434, in full_clean
+    self._clean_form()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 455, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/forms.py", line 168, in clean
+    user = adapter.authenticate(self.request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 676, in authenticate
+    self.pre_authenticate(request, **credentials)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 665, in pre_authenticate
+    if not ratelimit.consume(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 100, in consume
+    rates = _parse_rates(app_settings.RATE_LIMITS.get(action))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 51, in _parse_rates
+    rates = rates.strip()
+            ^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'strip'
+ERROR 2025-03-04 00:18:16,544 basehttp 6005 139720819758784 "POST /accounts/login/ HTTP/1.1" 500 197747
+ERROR 2025-03-04 01:13:33,235 log 6005 139720819758784 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/views.py", line 93, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 53, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 81, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 434, in full_clean
+    self._clean_form()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 455, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/forms.py", line 168, in clean
+    user = adapter.authenticate(self.request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 676, in authenticate
+    self.pre_authenticate(request, **credentials)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 665, in pre_authenticate
+    if not ratelimit.consume(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 100, in consume
+    rates = _parse_rates(app_settings.RATE_LIMITS.get(action))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 51, in _parse_rates
+    rates = rates.strip()
+            ^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'strip'
+ERROR 2025-03-04 01:13:33,296 basehttp 6005 139720819758784 "POST /accounts/login/ HTTP/1.1" 500 197745
+INFO 2025-03-04 01:13:33,332 basehttp 6005 139720819758784 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-03-04 01:13:33,335 basehttp 6005 139720809268928 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-03-04 01:13:33,335 basehttp 6005 139720800876224 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-03-04 01:13:33,410 basehttp 6005 139720819758784 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-03-04 01:14:28,868 log 6005 139720819758784 Forbidden (CSRF token from POST incorrect.): /accounts/confirm-email/MQ:1tpLZn:Sf9XBlKmeSwGcDW1JZCvXov0HGa2S4GQgtiug5J_jkk/
+WARNING 2025-03-04 01:14:28,880 basehttp 6005 139720819758784 "POST /accounts/confirm-email/MQ:1tpLZn:Sf9XBlKmeSwGcDW1JZCvXov0HGa2S4GQgtiug5J_jkk/ HTTP/1.1" 403 16463
+INFO 2025-03-04 01:14:28,913 basehttp 6005 139720809268928 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-03-04 01:14:28,914 basehttp 6005 139720819758784 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-03-04 01:14:28,914 basehttp 6005 139720800876224 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-03-04 01:14:28,963 basehttp 6005 139720819758784 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+ERROR 2025-03-04 01:14:37,365 log 6005 139720819758784 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/views.py", line 93, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 53, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 81, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 434, in full_clean
+    self._clean_form()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 455, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/forms.py", line 168, in clean
+    user = adapter.authenticate(self.request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 676, in authenticate
+    self.pre_authenticate(request, **credentials)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 665, in pre_authenticate
+    if not ratelimit.consume(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 100, in consume
+    rates = _parse_rates(app_settings.RATE_LIMITS.get(action))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 51, in _parse_rates
+    rates = rates.strip()
+            ^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'strip'
+ERROR 2025-03-04 01:14:37,429 basehttp 6005 139720819758784 "POST /accounts/login/ HTTP/1.1" 500 197747
+INFO 2025-03-04 01:25:30,178 autoreload 8782 127811476582528 Watching for file changes with StatReloader
+INFO 2025-03-04 01:25:37,549 autoreload 8819 123921274675328 Watching for file changes with StatReloader
+WARNING 2025-03-04 01:25:39,519 log 8819 123921147885248 Not Found: /
+WARNING 2025-03-04 01:25:39,519 basehttp 8819 123921147885248 "GET / HTTP/1.1" 404 16391
+INFO 2025-03-04 01:25:45,223 basehttp 8819 123921147885248 "GET /accounts/login/ HTTP/1.1" 200 16475
+INFO 2025-03-04 01:25:45,255 basehttp 8819 123921139492544 "GET /static/js/main.js HTTP/1.1" 304 0
+WARNING 2025-03-04 01:25:45,258 basehttp 8819 123921147885248 "GET /static/css/main.css HTTP/1.1" 404 1896
+ERROR 2025-03-04 01:26:05,224 log 8819 123921139492544 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/views.py", line 93, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 53, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/mixins.py", line 81, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 434, in full_clean
+    self._clean_form()
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/django/forms/forms.py", line 455, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/forms.py", line 168, in clean
+    user = adapter.authenticate(self.request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 676, in authenticate
+    self.pre_authenticate(request, **credentials)
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/account/adapter.py", line 665, in pre_authenticate
+    if not ratelimit.consume(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 100, in consume
+    rates = _parse_rates(app_settings.RATE_LIMITS.get(action))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yeison/ecomycr/proyectos/python/pythonenv/lib/python3.12/site-packages/allauth/core/ratelimit.py", line 51, in _parse_rates
+    rates = rates.strip()
+            ^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'strip'
+ERROR 2025-03-04 01:26:05,286 basehttp 8819 123921139492544 "POST /accounts/login/ HTTP/1.1" 500 197877

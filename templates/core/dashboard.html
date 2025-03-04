@@ -1,0 +1,28 @@
+<!-- templates/core/dashboard.html -->
+{% extends 'base/base.html' %}
+
+{% block title %}Dashboard - Sistema Seguro{% endblock %}
+
+{% block content %}
+    <div class="dashboard">
+        <h1>Panel de Control</h1>
+        <p>Bienvenido, {{ user.get_full_name }}. Esta es tu área segura.</p>
+        
+        <div class="dashboard-cards">
+            <div class="card">
+                <h2>Perfil de Usuario</h2>
+                <p>Email: {{ user.email }}</p>
+                <p>Nombre: {{ user.get_full_name }}</p>
+                <p>2FA: {% if user.is_totp_enabled %}Activado{% else %}Desactivado{% endif %}</p>
+                <a href="#" class="btn secondary">Gestionar Perfil</a>
+            </div>
+            
+            <div class="card">
+                <h2>Seguridad</h2>
+                <p>Última conexión: {{ user.last_login|date:"d/m/Y H:i" }}</p>
+                <p>IP: {{ user.last_login_ip }}</p>
+                <a href="{% url 'account_set_password' %}" class="btn secondary">Cambiar Contraseña</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

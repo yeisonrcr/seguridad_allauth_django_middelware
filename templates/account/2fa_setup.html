@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Configurar Autenticación de Dos Factores" %}{% endblock %}
+
+{% block content %}
+<div class="auth-form">
+    <h1>{% trans "Configurar Autenticación de Dos Factores" %}</h1>
+    
+    <p class="instructions">Escanea el código QR con tu aplicación de autenticación o ingresa la clave manualmente.</p>
+    
+    <div class="qr-container">
+        <img src="{{ qr_code_url }}" alt="Código QR para 2FA">
+    </div>
+    
+    <div class="secret-key">
+        <p>Clave secreta: <strong>{{ secret_key }}</strong></p>
+    </div>
+    
+    <form method="POST" action="{% url 'two_factor_setup' %}">
+        {% csrf_token %}
+        
+        {% if form.errors %}
+        <div class="errors">
+            <p>Por favor, corrige los siguientes errores:</p>
+            {% for field in form %}
+                {% for error in field.errors %}
+                <p class="error">{{ field.label }}: {{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+            <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="form-group">
+            <label for="id_code">{% trans "Código de verificación" %}:</label>
+            <input type="text" name="code" placeholder="Ingresa el código de 6 dígitos" required id="id_code" autocomplete="one-time-code" inputmode="numeric" pattern="[0-9]*" maxlength="6">
+            <small class="help-text">Ingresa el código de 6 dígitos que muestra tu aplicación de autenticación.</small>
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit">{% trans "Verificar y activar 2FA" %}</button>
+            <a href="{% url 'profile' %}" class="secondary-action">{% trans "Cancelar" %}</a>
+        </div>
+    </form>
+    
+    <div class="backup-codes">
+        <h2>{% trans "Códigos de respaldo" %}</h2>
+        <p>Guarda estos códigos en un lugar seguro. Podrás usarlos para iniciar sesión si pierdes acceso a tu dispositivo de autenticación.</p>
+        
+        <div class="codes-list">
+            {% for code in backup_codes %}
+            <code>{{ code }}</code>{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+        
+        <button class="download-codes" id="download-codes">{% trans "Descargar códigos" %}</button>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+document.getElementById('download-codes').addEventListener('click', function() {
+    const backupCodes = [{% for code in backup_codes %}'{{ code }}'{% if not forloop.last %}, {% endif %}{% endfor %}];
+    const codesText = 'CÓDIGOS DE RESPALDO - GUÁRDALOS DE FORMA SEGURA\n\n' + backupCodes.join('\n');
+    
+    const element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(codesText));
+    element.setAttribute('download', 'codigos_respaldo.txt');
+    element.style.display = 'none';
+    
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+});
+</script>
+{% endblock %}
+{% endblock %}

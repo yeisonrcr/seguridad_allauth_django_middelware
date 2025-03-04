@@ -1,0 +1,41 @@
+<!-- templates/core/home.html -->
+{% extends 'base/base.html' %}
+
+{% block title %}Inicio - Sistema Seguro{% endblock %}
+
+{% block content %}
+    <div class="hero">
+        <h1>Bienvenido a Sistema Seguro</h1>
+        <p>Una plataforma protegida contra ataques cibernéticos.</p>
+        
+        {% if user.is_authenticated %}
+            <div class="actions">
+                <a href="{% url 'core:dashboard' %}" class="btn primary">Ir al Dashboard</a>
+            </div>
+        {% else %}
+            <div class="actions">
+                <a href="{% url 'account_login' %}" class="btn primary">Iniciar Sesión</a>
+                <a href="{% url 'account_signup' %}" class="btn secondary">Registrarse</a>
+            </div>
+        {% endif %}
+    </div>
+    
+    <div class="features">
+        <div class="feature">
+            <h2>Seguridad Avanzada</h2>
+            <p>Protección contra ataques de fuerza bruta y medidas de seguridad de última generación.</p>
+        </div>
+        <div class="feature">
+            <h2>Autenticación de Dos Factores</h2>
+            <p>Agregue una capa adicional de seguridad a su cuenta con la autenticación de dos factores (2FA).</p>
+        </div>
+        <div class="feature">
+            <h2>Monitoreo Continuo</h2>
+            <p>Vigilancia constante para detectar amenazas y garantizar un entorno seguro para sus datos.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Sistema Seguro. Todos los derechos reservados.</p>
+    </footer>
+{% endblock %}

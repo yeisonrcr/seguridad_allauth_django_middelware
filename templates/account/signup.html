@@ -1,0 +1,67 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Registro" %}{% endblock %}
+
+{% block content %}
+<div class="auth-form">
+    <h1>{% trans "Registro" %}</h1>
+    
+    <form class="signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        
+        {% if form.errors %}
+        <div class="errors">
+            <p>Por favor, corrige los siguientes errores:</p>
+            {% for field in form %}
+                {% for error in field.errors %}
+                <p class="error">{{ field.label }}: {{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+            <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="form-group">
+            <label for="id_email">{% trans "Correo electrónico" %}:</label>
+            <input type="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required id="id_email">
+            <small class="help-text">Tu correo electrónico será verificado.</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="id_username">{% trans "Nombre de usuario" %}:</label>
+            <input type="text" name="username" placeholder="usuario" autocomplete="username" required id="id_username">
+        </div>
+        
+        <div class="form-group">
+            <label for="id_password1">{% trans "Contraseña" %}:</label>
+            <input type="password" name="password1" placeholder="Contraseña" autocomplete="new-password" required id="id_password1">
+            <small class="help-text">La contraseña debe tener al menos 8 caracteres, incluir letras, números y caracteres especiales.</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="id_password2">{% trans "Confirmar contraseña" %}:</label>
+            <input type="password" name="password2" placeholder="Repite la contraseña" autocomplete="new-password" required id="id_password2">
+        </div>
+        
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        
+        <div class="terms-privacy">
+            <input type="checkbox" name="terms_accepted" id="id_terms_accepted" required>
+            <label for="id_terms_accepted">{% trans "Acepto los términos y condiciones y la política de privacidad" %}</label>
+        </div>
+        
+        <div class="form-actions">
+            <button type="submit">{% trans "Registrarse" %}</button>
+        </div>
+    </form>
+    
+    <div class="auth-links">
+        <p>{% trans "¿Ya tienes una cuenta?" %} <a href="{% url 'account_login' %}">{% trans "Inicia sesión" %}</a></p>
+    </div>
+</div>
+{% endblock %}
